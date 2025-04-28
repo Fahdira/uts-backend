@@ -14,7 +14,7 @@ app.get('/products', async (req, res) => {
       id: product.id,
       name: product.name,
       price: product.price,
-      imageUrl: s3UrlPrefix + product.image_key
+      imageUrl: s3UrlPrefix + product.image_key  // Make sure only 1 prefix
     }));
     res.json(products);
   } catch (err) {
